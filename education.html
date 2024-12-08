@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Get to Know Syaffini</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2; /* Light pink background */
+            background-image: radial-gradient(circle at center, rgba(255, 182, 193, 0.6) 10%, rgba(255, 255, 255, 0) 40%), radial-gradient(circle at center, rgba(255, 255, 255, 0) 40%, rgba(255, 182, 193, 0.6) 60%);
+            background-size: 50px 50px; /* Adjust size for flower-like effect */
+            background-position: 0 0, 25px 25px; /* Slight offset for pattern */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full viewport height */
+            position: relative;
+        }
+
+        /* Header Section with Title and Menu Buttons */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #ff66b2; /* Soft pink background */
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for the header */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        /* Menu Bar Styling */
+        .menu-bar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #ff3385; /* Darker pink for the menu bar */
+            padding: 10px 0;
+        }
+
+        .menu-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .menu-bar a:hover {
+            color: #d6336c; /* Lighter pink on hover */
+        }
+
+        /* Title for EDUCATION */
+        .education-title {
+            text-align: center;
+            font-size: 40px;
+            color: #ff3385;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Menu Button Section */
+        .menu-button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .menu-button button {
+            padding: 10px 20px;
+            background-color: #ff3385; /* Darker pink */
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button button:hover {
+            background-color: #d6336c; /* Slightly darker pink for hover */
+        }
+
+        /* Container for Centralized Content */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        /* White Container for Profile Content */
+        .white-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for white container */
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        /* Content Section with 5 Columns for Education Information */
+        .education-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Individual Box Styling */
+        .education-box {
+            background-color: #ffe6f2; /* Light pink background for each box */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 18%;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none; /* Ensure text links don't get underlined */
+            transition: background-color 0.3s ease; /* Smooth transition for background color change */
+        }
+
+        /* Hover Effect: Darken the background when the cursor is on the container */
+        .education-box:hover {
+            background-color: #ffb3cc; /* A darker pink shade on hover */
+        }
+
+        /* Circular Frame for Images */
+        .education-box img {
+            width: 100px; /* Set width for the image */
+            height: 100px;
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image covers the container */
+            margin-bottom: 15px;
+            border: 3px solid #ff3385; /* Adds a border to the image */
+        }
+
+        .education-box h3 {
+            color: #ff3385;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #ff66b2; /* Soft pink */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        footer span {
+            font-weight: bold;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .education-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .education-box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .menu-button {
+                justify-content: center;
+                position: static;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Title and Menu Bar -->
+    <div class="header">
+        <h1>Let's Get to Know Syaffini!</h1>
+        <div class="menu-button">
+            <button onclick="window.location.href='homepage.html'">Previous</button>
+        </div>
+    </div>
+
+    <!-- Menu Bar with Experience, Family, and Biodata -->
+    <div class="menu-bar">
+        <a href="experience.html">Experience</a> <!-- Updated the href to point to the correct page -->
+        <a href="family.html">Family</a> <!-- Updated the href to point to the correct page -->
+        <a href="biodata.html">Biodata</a> <!-- Updated the href to point to the correct page -->
+    </div>
+
+    <!-- EDUCATION Title -->
+    <h2 class="education-title">EDUCATION</h2>
+
+    <!-- Container for Centralized Content -->
+    <div class="container">
+        <!-- White Container for Profile Content -->
+        <div class="white-container">
+            <!-- Content Section with 5 Columns for Education Information -->
+            <div class="education-content">
+                <a href="https://www.facebook.com/TpTelokPanglimaGarangB/?locale=ms_MY" class="education-box">
+                    <img src="TABIKA.jpg" alt="Tabika Picture">
+                    <h3>TABIKA PERPADUAN TELOK PANGLIMA GARANG</h3>
+                    <p>2009 until 2010</p>
+                </a>
+                <a href="https://www.facebook.com/sktelokpanglimagarang/" class="education-box">
+                    <img src="SKTPG.jpg" alt="SKTPG Picture">
+                    <h3>SEKOLAH KEBANGSAAN TELOK PANGLIMA GARANG</h3>
+                    <p>2011 until 2016</p>
+                </a>
+                <a href="https://www.facebook.com/people/Sekolah-Rendah-Agama-Telok-Panglima-Garang/61552967027706/?locale=fo_FO" class="education-box">
+                    <img src="SRATPG.jpg" alt="SRATPG Picture">
+                    <h3>SEKOLAH RENDAH AGAMA TELOK PANGLIMA GARANG</h3>
+                    <p>2011 until 2016</p>
+                </a>
+                <a href="https://www.instagram.com/officialsmktpg/" class="education-box">
+                    <img src="SMKTPG.jpg" alt="SMKTPG Picture">
+                    <h3>SEKOLAH MENENGAH KEBANGSAAN TELOK PANGLIMA GARANG</h3>
+                    <p>2017 until 2022</p>
+                </a>
+                <a href="https://www.instagram.com/uitmkampusrembau/?hl=en" class="education-box">
+                    <img src="UITM.jpg" alt="UiTM Picture">
+                    <h3>UiTM Cawangan Kampus Rembau</h3>
+                    <p>2022 until present</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with copyright -->
+    <footer>
+        &copy; 2024 <span>lynnzri</span>
+    </footer>
+
+</body>
+</html>

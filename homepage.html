@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2; /* Light pink background */
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, rgba(255, 182, 193, 0.5) 40%, rgba(255, 255, 255, 0.1) 60%);
+            background-size: 50px 50px; /* Size of the polka dots */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full viewport height */
+            position: relative;
+        }
+
+        /* Header Styling */
+        h1 {
+            font-size: 48px;
+            color: #d6336c; /* Light pinkish red color */
+            margin-top: 50px;
+        }
+        
+        h2 {
+            font-size: 28px;
+            color: #ff66b2; /* Soft pink */
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+        }
+
+        /* Profile Picture Frame (Twice the size under the subtitle) */
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            border: 8px solid #d6336c; /* Increased border size */
+            padding: 8px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 200px; /* Doubled size */
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Menu Container Styling (Single row for items) */
+        .menu-container {
+            display: flex;
+            justify-content: space-between; /* Items in one line */
+            margin-top: 30px;
+            text-align: left; /* Align the items left within the flex */
+        }
+
+        /* Menu Item Styling */
+        .menu-item {
+            text-align: center;
+            background-color: rgba(255, 204, 221, 0.9); /* Soft pink background */
+            border-radius: 10px;
+            padding: 20px;
+            width: 23%; /* Adjusted width for better spacing */
+            margin: 0 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background-color: rgba(255, 182, 193, 0.8); /* Lighter pink when hovered */
+        }
+
+        .menu-item .item-profile-container {
+            display: inline-block;
+            border: 8px solid #d6336c; /* Increased border size */
+            padding: 8px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            width: 120px; /* Increased size */
+            height: 120px;
+        }
+
+        .menu-item .item-profile-img {
+            width: 120px; /* Increased size */
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .item-title {
+            font-size: 18px;
+            color: #d6336c;
+            margin-top: 10px;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #ff66b2;
+            margin-bottom: 20px;
+        }
+
+        footer span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WELCOME, السلام عليكم</h1>
+        <h2>Syaffini, who is she?</h2>
+        
+        <!-- Profile Picture with Light Pinkish Red Frame (Twice as big as before) -->
+        <div class="profile-container">
+            <img src="NOTEPAD1.jpg" alt="Profile Picture" class="profile-img">
+        </div>
+        
+        <!-- Menu in a Single Row -->
+        <div class="menu-container">
+            <!-- Biodata Section -->
+            <a href="biodata.html" class="menu-item">
+                <div class="item-profile-container">
+                    <img src="NOTEPAD9.jpg" alt="Profile Picture" class="item-profile-img">
+                </div>
+                <div class="item-title">Biodata</div>
+                <div class="item-description">Some personal information about Syaffini.</div>
+            </a>
+
+            <!-- Education Section -->
+            <a href="education.html" class="menu-item">
+                <div class="item-profile-container">
+                    <img src="UITM.jpg" alt="Profile Picture" class="item-profile-img">
+                </div>
+                <div class="item-title">Education</div>
+                <div class="item-description">Details about her education.</div>
+            </a>
+
+            <!-- Experience Section -->
+            <a href="experience.html" class="menu-item">
+                <div class="item-profile-container">
+                    <img src="PDKL.jpg" alt="Profile Picture" class="item-profile-img">
+                </div>
+                <div class="item-title">Experience</div>
+                <div class="item-description">Information about her work experience.</div>
+            </a>
+
+            <!-- Family Section -->
+            <a href="family.html" class="menu-item">
+                <div class="item-profile-container">
+                    <img src="NOTEPAD7.jpg" alt="Profile Picture" class="item-profile-img">
+                </div>
+                <div class="item-title">Family</div>
+                <div class="item-description">Details about her family.</div>
+            </a>
+        </div>
+        
+        <!-- Footer with copyright -->
+        <footer>
+            &copy; 2024 <span>lynnzri</span>
+        </footer>
+    </div>
+</body>
+</html>

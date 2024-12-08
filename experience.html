@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2; /* Light pink background */
+            background-image: radial-gradient(circle at center, rgba(255, 182, 193, 0.6) 10%, rgba(255, 255, 255, 0) 40%), radial-gradient(circle at center, rgba(255, 255, 255, 0) 40%, rgba(255, 182, 193, 0.6) 60%);
+            background-size: 50px 50px; /* Adjust size for flower-like effect */
+            background-position: 0 0, 25px 25px; /* Slight offset for pattern */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full viewport height */
+            position: relative;
+        }
+
+        /* Header Section with Title and Menu Buttons */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #ff66b2; /* Soft pink background */
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for the header */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        /* Menu Bar Styling */
+        .menu-bar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #ff3385; /* Darker pink for the menu bar */
+            padding: 10px 0;
+        }
+
+        .menu-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .menu-bar a:hover {
+            color: #d6336c; /* Lighter pink on hover */
+        }
+
+        /* Title for EXPERIENCE */
+        .experience-title {
+            text-align: center;
+            font-size: 40px;
+            color: #ff3385;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Menu Button Section */
+        .menu-button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .menu-button button {
+            padding: 10px 20px;
+            background-color: #ff3385; /* Darker pink */
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button button:hover {
+            background-color: #d6336c; /* Slightly darker pink for hover */
+        }
+
+        /* Container for Centralized Content */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items at the top */
+            gap: 30px; /* Add gap between items */
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        /* White Container for Profile Content */
+        .white-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for white container */
+            padding: 30px;
+            width: 50%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        /* Section for Circle Frames */
+        .circle-frame-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 25%; /* Increase width to leave space for content */
+        }
+
+        .circle-frame-container img {
+            width: 200px; /* Adjust size for better fit */
+            height: 200px; /* Adjust size for better fit */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #ff3385;
+        }
+
+        /* Section for Information Container (Vertical layout) */
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .info-container p {
+            margin-bottom: 20px;
+        }
+
+        /* Rectangle Frame for Image Below Info Container (Responsive) */
+        .info-image {
+            width: 100%;
+            height: 200px;
+            background-image: url('PDKL4.jpg'); /* Add your image here */
+            background-size: cover; /* Ensures the image covers container */
+            background-position: center; /* Center the image cover the container */
+            background-repeat:no-repeat;
+            background-color: #ffe6f2;
+            border: 3px solid #ff3385;
+            border-radius: 10px;
+        }
+
+        /* Vertical Rectangle Frames for Pictures */
+        .vertical-frame-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .vertical-frame {
+            width: 30%;
+            height: 300px;
+            background-color: #ffe6f2;
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #ff3385;
+            border-radius: 10px;
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #ff66b2; /* Soft pink */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        footer span {
+            font-weight: bold;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .white-container {
+                width: 80%;
+            }
+
+            .circle-frame-container {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .info-container {
+                width: 100%;
+            }
+
+            .vertical-frame {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Title and Menu Bar -->
+    <div class="header">
+        <h1>Let's Get to Know Syaffini!</h1>
+        <div class="menu-button">
+            <button onclick="window.location.href='homepage.html'">Previous</button>
+        </div>
+    </div>
+
+    <!-- Menu Bar with Experience, Family, and Biodata -->
+    <div class="menu-bar">
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="biodata.html">Biodata</a>
+    </div>
+
+    <!-- EXPERIENCE Title -->
+    <h2 class="experience-title">EXPERIENCE</h2>
+
+    <!-- Container for Centralized Content -->
+    <div class="container">
+        <!-- Left Side: Circle Frames -->
+        <div class="circle-frame-container">
+            <img src="EXP1.jpg" alt="Circle Picture 1">
+            <img src="EXP2.jpg" alt="Circle Picture 2">
+            <img src="EXP3.jpg" alt="Circle Picture 3">
+        </div>
+
+        <!-- Right Side: Info Container and Rectangle Image -->
+        <div class="white-container">
+            <div class="info-container">
+                <p>I underwent industrial training at <a href="https://www.selangor.gov.my/kualalangat.php" target="_blank">Pejabat Daerah dan Tanah Kuala Langat</a> for 2 months and I was placed in the Information and Communications Technology (ICT) unit. I have experience participating in the parade for Ma
+                    laysia's 67th Independence Day alongside PDKL officers.</p>
+            </div>
+            <div class="info-image"></div>
+            <div class="info-container">
+                <p>During the year 2021, after finishing Sijil Peperiksaan Malaysia (SPM), I worked as a cashier and storekeeper at <a href="https://99speedmart.com.my/" target="_blank">99 Speedmart</a> for 6 months before continuing my diploma studies at <a href="https://uitm.edu.my/index.php/en/" target="_blank" >Universiti Teknologi Mara (UiTM).</a></p>
+            </div>
+            <div class="info-container">
+                <p>Throughout my studies at UiTM, I had the experience of participating in a self discipline camp to complete my co-curricular subject in the field of Taekwondo Tempur Tanpa Senjata (TTS). We successfully conducted this character-building camp 2km from the UiTM area. I was able to hone my teamwork skills, communication skills, survival skills, and self-defense skills from this camp.</p>
+            </div>      
+        </div>
+
+        <!-- Right Side: Circle Frames -->
+        <div class="circle-frame-container">
+            <img src="EXP4.jpg" alt="Circle Picture 4">
+            <img src="EXP5.jpg" alt="Circle Picture 5">
+            <img src="EXP6.jpg" alt="Circle Picture 6">
+        </div>
+    </div>
+
+    <!-- Vertical Rectangle Frames Section -->
+    <div class="vertical-frame-container">
+        <div class="vertical-frame" style="background-image: url('EXP7.jpg');"></div>
+        <div class="vertical-frame" style="background-image: url('EXP8.jpg');"></div>
+        <div class="vertical-frame" style="background-image: url('EXP9.jpg');"></div>
+        <div class="vertical-frame" style="background-image: url('EXP10.jpg');"></div>
+        <div class="vertical-frame" style="background-image: url('EXP11.jpg');"></div>
+        <div class="vertical-frame" style="background-image: url('EXP12.jpg');"></div>
+        <div class="vertical-frame" style="background-image: url('EXP13.jpg');"></div>
+        <div class="vertical-frame" style="background-image: url('EXP14.MOV');">
+            <video width="100%" height="100%" controls>
+                <source src="EXP14.MOV" type="video/mp4">
+                
+            </video>
+        </div>
+    </div>
+
+    <!-- Footer with copyright -->
+    <footer>
+        &copy; 2024 <span>lynnzri</span>
+    </footer>
+
+</body>
+</html>

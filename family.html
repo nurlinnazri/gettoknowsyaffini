@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Get to Know Syaffini</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2; /* Light pink background */
+            background-image: radial-gradient(circle at center, rgba(255, 182, 193, 0.6) 10%, rgba(255, 255, 255, 0) 40%), radial-gradient(circle at center, rgba(255, 255, 255, 0) 40%, rgba(255, 182, 193, 0.6) 60%);
+            background-size: 50px 50px; /* Adjust size for flower-like effect */
+            background-position: 0 0, 25px 25px; /* Slight offset for pattern */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full viewport height */
+            position: relative;
+        }
+
+        /* Header Section with Title and Menu Buttons */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #ff66b2; /* Soft pink background */
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for the header */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        /* Menu Bar Styling */
+        .menu-bar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #ff3385; /* Darker pink for the menu bar */
+            padding: 10px 0;
+        }
+
+        .menu-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .menu-bar a:hover {
+            color: #d6336c; /* Lighter pink on hover */
+        }
+
+        /* Title for FAMILY */
+        .biodata-title {
+            text-align: center;
+            font-size: 40px;
+            color: #ff3385;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Menu Button Section */
+        .menu-button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .menu-button button {
+            padding: 10px 20px;
+            background-color: #ff3385; /* Darker pink */
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button button:hover {
+            background-color: #d6336c; /* Slightly darker pink for hover */
+        }
+
+        /* Container for Centering Content */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        /* White Container for Profile Content */
+        .white-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for white container */
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        /* Content Section with Profile Picture and Information */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Profile Image (Transverse Rectangle with Curved Corners) */
+        .profile-img {
+            width: 700px;  /* Width of the image */
+            height: 400px; /* Height of the image, creating a transverse rectangle */
+            border-radius: 20px; /* Rounded corners for the transverse rectangle */
+            border: 5px solid #ff3385; /* Dark pink border */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+
+        /* Profile Information Styling */
+        .profile-info {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .profile-info p {
+            margin: 10px 0;
+        }
+
+        /* Title for "The Nazri's" */
+        .profile-title {
+            font-size: 60px; /* Title "The Nazri's" is 2x bigger than normal text */
+            font-weight: bold;
+            color: #ff3385; /* Dark pink */
+            margin: 0;
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #ff66b2; /* Soft pink */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        footer span {
+            font-weight: bold;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-img {
+                margin-bottom: 20px;
+            }
+
+            .profile-info {
+                text-align: center;
+            }
+
+            .menu-button {
+                justify-content: center;
+                position: static;
+                transform: none;
+            }
+        }
+
+        /* Vertical Rectangle Frames Section */
+        .rectangle-frames {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* Adjusted Rectangle Frames for 9:16 Aspect Ratio */
+        .rectangle-frame {
+            width: 240px;  /* 4 times bigger width */
+            height: 426px; /* 4 times bigger height */
+            border: 3px solid #ff3385; /* Dark pink border */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            overflow: hidden;
+        }
+
+        .rectangle-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section with Title and Menu Bar -->
+    <div class="header">
+        <h1>Let's Get to Know Syaffini!</h1>
+        <div class="menu-button">
+            <button onclick="location.href='homepage.html'">Previous</button>
+        </div>
+    </div>
+
+    <!-- Menu Bar with Biodata, Education, Experience -->
+    <div class="menu-bar">
+        <a href="biodata.html">Biodata</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+    </div>
+
+    <!-- FAMILY Title -->
+    <h2 class="biodata-title">FAMILY</h2>
+
+    <!-- Container for Centralized Content placed directly below FAMILY title -->
+    <div class="container">
+        <!-- White Container for Profile Content -->
+        <div class="white-container">
+            <!-- Content Section with Profile Picture and Information -->
+            <div class="content">
+                <div class="profile">
+                    <!-- Profile Picture -->
+                    <img src="NOTEPAD8.jpg" alt="Profile Picture" class="profile-img">
+
+                    <!-- Profile Information -->
+                    <div>
+                        <!-- Title "The Nazri's" -->
+                        <div class="profile-title">The Nazri's</div>
+
+                        <!-- Detailed Information -->
+                        <div class="profile-info">
+                            <p>My mother, father, and younger brother complete my small family. In this family, I am the only daughter and the oldest child. Even though we have a compassionate life, my parents are able to provide for all of our desires and necessities, which is the reason I love them. Even if it means risking my life, I would do anything for my family.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vertical Rectangle Frames Section -->
+    <div class="rectangle-frames">
+        <div class="rectangle-frame"><img src="FAM4.jpg" alt="Frame 1"></div>
+        <div class="rectangle-frame"><img src="FAM8.jpg" alt="Frame 2"></div>
+        <div class="rectangle-frame"><img src="FAM3.jpg" alt="Frame 3"></div>
+        <div class="rectangle-frame"><img src="FAM5.jpg" alt="Frame 4"></div>
+        <div class="rectangle-frame"><img src="FAM2.jpg" alt="Frame 5"></div>
+        <div class="rectangle-frame"><img src="FAM1.jpg" alt="Frame 6"></div>
+        <div class="rectangle-frame"><img src="FAM6.jpg" alt="Frame 7"></div>
+        <div class="rectangle-frame"><img src="FAM9.jpg" alt="Frame 8"></div> 
+        <div class="rectangle-frame"><img src="FAM10.jpg" alt="Frame 6"></div>
+        <div class="rectangle-frame"><img src="FAM11.jpg" alt="Frame 7"></div>
+    </div>
+
+    <!-- Footer with copyright -->
+    <footer>
+        &copy; 2024 <span>lynnzri</span>
+    </footer>
+</body>
+</html>
